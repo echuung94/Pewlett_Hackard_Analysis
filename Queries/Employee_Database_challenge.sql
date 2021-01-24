@@ -27,7 +27,7 @@ GROUP BY title
 ORDER BY COUNT(title) DESC; 
 
 -- Deliverable 2 
-SELECT DISTINCT ON (e.emp_no) e.emp_no, e.first_name, e.birth_date, de.from_date, de.to_date, t.title 
+SELECT DISTINCT ON (e.emp_no) e.emp_no, e.first_name, e.last_name, e.birth_date, de.from_date, de.to_date, t.title 
 -- INTO mentorship_eligibility 
 FROM employees as e 
 INNER JOIN dept_emp as de ON (e.emp_no = de.emp_no) 
